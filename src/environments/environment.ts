@@ -8,7 +8,7 @@ export const urlEndpoints = {
   // proeprties for localhost
   'localhost' : {
     loginUrl:'http://localhost:4200/?code=YSdALjCJRZqokUKlTWtGWadiw3OuXuw3yaEAAAfU',
-    logoutUrl: '',
+    logoutUrl: 'http://localhost:4200',
     // baseUrl: 'http://localhost:4200/?code=YSdALjCJRZqokUKlTWtGWadiw3OuXuw3yaEAAAfU'
     // baseUrl: 'http://localhost:4200'
   },
