@@ -46,6 +46,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  search() {
+    alert("Searching for: " + this.model.search);
+  }
+
   testFn(value) {
     console.log("Selected: ", value);
   }
