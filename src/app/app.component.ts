@@ -56,7 +56,7 @@ export class AppComponent {
       localStorage.setItem("deepLink", deepLink);
     }
     if (currentUrl.indexOf('code') < 0) {
-     window.location.href = urlEndpoints[window.location.hostname].loginUrl;
+    //  window.location.href = urlEndpoints[window.location.hostname].loginUrl;
     } else {
       var codePos = currentUrl.search("code=");
       var authCode = currentUrl.substring(codePos + 5, currentUrl.length);
