@@ -1,0 +1,12 @@
+<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-1 text-muted">
+    <span>Available reports</span>
+  </h6>
+  <ul class="nav flex-column">
+    <li class="nav-item" *ngFor="let category of categories; let i = index">
+      <a class="nav-link"
+        [class.selected-item]="i == selected"
+        (click)="setSelectedCategory(category, i)">
+        {{ category }}
+      </a>
+    </li>
+  </ul>

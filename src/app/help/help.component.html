@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Help Center</h1>
+    
+      <get-started></get-started>
+ 
+      <h2 style="margin-top: 66px">All Help Categories</h2>
+ 
+      <!-- <fm-connect-carousel
+        *ngIf="elearning"
+        headerText="OnDemand eLearning Courses"
+        carouselDescription="Courses and modules to help with your learning and understanding of topics within FM Connect"
+        viewDesc="true"
+        cardType="elearning"
+        [content]="elearning"
+        >
+      </fm-connect-carousel> -->
+ 
+      <div *ngIf="elearning">
+        <elearning-card
+          [content]="elearning"
+          viewDesc="true"
+          [class.ui-card-body-no-desc]="viewDesc == 'false'">
+        </elearning-card>
+      </div>
+     
+      <!-- <fm-connect-carousel
+        *ngIf="jobAids"
+        headerText="Job Aids"
+        carouselDescription="Courses and modules to help with your learning and understanding of topics within FM Connect"
+        viewDesc="true"
+        cardType="jobAids"
+        [content]="jobAids">
+      </fm-connect-carousel> -->
+ 
+      <p class="bottom-margin"></p>
+     
+    </div>
+   
+  </div>
+    <br><br><br>
+  
+ </div>

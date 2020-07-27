@@ -1,0 +1,58 @@
+.jumbotron {
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)),
+    url('../../assets/images/bkgd-image-placeholder.jpg') no-repeat center center fixed;
+  
+  background-size: cover;
+  color: white;
+  margin: -3px 0 1rem;
+  height: 340px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 40px;
+  letter-spacing: 12px;
+}
+h2 {
+  font-weight: 500!important;
+  letter-spacing: .035em;
+  margin: 0;
+}
+.input-group {
+  width: 57%;
+  margin: auto;
+ 
+  & .input-group-prepend, & .input-group-append {
+    opacity: .65;
+  }
+}
+ 
+input, input:focus {
+  font-size: 24px;
+  -webkit-text-fill-color: #ccc;
+  background-color: rgba(240, 87, 87, 0.25);
+}
+.icon {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+ 
+.ic-streamlined {
+  background: url('../../assets/images/streamlined-data.svg') no-repeat center center;
+  background-size: cover;
+}
+.ic-bi-tools {
+  background: url('../../assets/images/bi-tools.svg') no-repeat center center;
+  background-size: cover;
+}
+.ic-speed {
+  background: url('../../assets/images/speed-efficient.svg') no-repeat center center;
+  background-size: cover;
+}
+ 
+reports-carousel[style] {
+  margin: 40px 0;
+}

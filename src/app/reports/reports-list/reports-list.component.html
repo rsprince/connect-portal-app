@@ -1,0 +1,94 @@
+<div *ngIf="reports">
+  <div [@listAnimation]="reports.length">
+    <!-- <div> -->
+      <div class="row report-list" *ngFor="let report of reports">
+        <div class="col-md-12">
+          <h2>
+              {{ report.name }}
+          </h2>
+          <p class="lead">
+            {{ report.tagline }}
+          </p>
+ 
+          <div class="row accordion-row">
+            <div class="col-md-12 col-sm-12">
+              <!-- <fm-accordion>
+                <fm-accordionTab header="details"> -->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <small>
+                            {{ report.description }}
+                          </small>
+                      </div>
+                      <div class="col-md-6 small">
+                        <span class="text-dark font-weight-bold">Primary Contact:</span> {{ report.primaryContact }}
+                        <br /><br />
+                        <span class="text-dark font-weight-bold">Last Update:</span> {{ report.lastUpdate }}
+                    </div>
+                  </div>
+                <!-- </fm-accordionTab>
+              </fm-accordion> -->
+            </div>
+          </div>
+ 
+          <!-- <fm-accordion>
+            <fm-accordionTab header="downloads"> -->
+              <div class="row accordion-row">
+                <div class="col-md-3">
+                  <label for="dateFrom">From:</label>
+                </div>
+                <div class="col-md-3">
+                  <label for="dateTo">To:</label>
+                </div>
+                <div class="col-md-3">
+                    <label>Formats:</label>
+                </div>
+                <div class="col-md-3">
+               
+                </div>
+              </div>    
+              <div class="row align-items-center accordion-row">
+                <div class="col-md-3">
+                  <div class="form-group">  
+                    <input type="date" class="form-control" id="dateFrom" />
+                  </div>
+                </div>
+             
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <input type="date" class="form-control" id="dateTo" />
+                  </div>
+                </div>
+             
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <span class="download-icons" *ngIf="report.formats.indexOf('tableau') >= 0">
+                      <img src="../assets/images/ic_tableau.svg" class="d-inline-block align-top" alt="Download Tableau">
+                    </span>
+                    <span class="download-icons" *ngIf="report.formats.indexOf('txt') >= 0">
+                      <img src="../assets/images/ic_text.svg" class="d-inline-block align-top" alt="Download Text">
+                    </span>
+                    <span class="download-icons" *ngIf="report.formats.indexOf('pdf') >= 0">
+                      <img (click)="saveFile('../assets/downloads/test.txt', report.name )" src="../assets/images/ic_pdf.svg" class="d-inline-block align-top" alt="Download PDF">
+                    </span>
+                    <span class="download-icons" *ngIf="report.formats.indexOf('xls') >= 0">
+                      <img src="../assets/images/ic_xls.svg" class="d-inline-block align-top" alt="Download Excel">
+                    </span>
+                  </div>
+                </div>
+             
+                <div class="col-md-3 mt-auto">
+                  <div class="form-group">
+                    <button type="date" class="btn btn-primary form-control">
+                      Submit
+                    </button>
+                  </div>
+                </div>          
+              </div>
+            <!-- </fm-accordionTab>
+          </fm-accordion>        -->
+        </div>
+      </div>
+  </div>
+</div>
+ 

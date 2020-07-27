@@ -1,0 +1,41 @@
+<fmc-card
+  [viewDesc]="viewDesc"
+  class="ui-card-shadow"
+  >
+  <h3 class="carousel-card-header">
+      {{ content.name.length <= 35 ? content.name : (content.name | slice: 0:32) + '...' }}
+  </h3>
+  <div class="ui-g" *ngIf="viewDesc == 'true'">
+    <div class="ui-g ui-g-12 ui-card-description">
+      {{ content.tagline.length <= 188 ? content.tagline : (content.tagline | slice: 0:185) + '...' }}
+    </div>
+  </div>
+  <div class="ui-g">
+      <div class="ui-g ui-g-2 date-header">
+        <strong>Length</strong>
+      </div>
+      <div class="ui-g ui-g-10 date-header">
+        {{ content.time }}
+      </div>
+  </div>
+   
+  <!-- <fm-footer-template>
+    <div class="ui-g">
+      <div class="ui-g ui-g-2">
+      </div>
+      <div class="ui-g ui-g-2">
+      </div>
+      <div class="ui-g ui-g-8 text-right">
+        <a href="http://www.google.com" target="_blank">
+          <button
+            id="read-jobaid"
+            fmButton
+            type="button"
+            label="View Course"
+            class="ui-button-secondary">
+          </button>
+        </a>
+      </div>
+    </div>
+  </fm-footer-template> -->
+</fmc-card>

@@ -1,0 +1,23 @@
+<div
+  [ngClass]="{'ui-card ui-widget ui-widget-content ui-corner-all ui-card-shadow':true, 'ui-card-pointer':pointer}"
+  [ngStyle]="style"
+  [class]="styleClass"
+> 
+  <div class="ui-card-header" *ngIf="image">
+      <img class="ui-card-image" [src]="imgSrc" [alt]="altTxt">
+      <div *ngIf="header && image">
+        <ng-content select="fm-header-template"></ng-content>
+      </div>
+  </div>
+  <div class="ui-card-body" [class.ui-card-body-no-desc]="!viewDesc">
+      <div class="ui-card-title" *ngIf="title">{{title}}</div>
+      <div class="ui-card-subtitle" *ngIf="subtitle">{{subtitle}}</div>
+      <div class="ui-card-content">
+          <ng-content></ng-content>
+      </div>
+      <div class="ui-card-footer" *ngIf="footer">
+          <ng-content select="fm-footer-template"></ng-content>
+      </div>
+  </div>
+</div>
+ 

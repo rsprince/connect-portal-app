@@ -1,0 +1,182 @@
+@import './variables';
+@import './mixins';
+ 
+html {
+  position: relative;
+  min-height: 101%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/*
+ * Nav Bar
+----------------------------------- */
+ 
+/* Fix for IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // IE10+
+  .navbar-nav {
+    padding-left: 70px;
+  }
+ 
+  .navbar .navbar-expand-lg .navbar-dark .bg-dark .fixed-top .nav-link a:hover {
+    color: $fm-green !important;
+  }
+}
+ 
+body .ui-accordion .ui-accordion-header a {
+  padding-left: 0;
+}
+ 
+body .ui-accordion .ui-accordion-header.ui-state-active a {
+  background: #ccc !important;
+}
+ 
+body .ui-accordion .ui-accordion-content {
+  background: lighten($fm-green, 30%);
+  padding: 0;
+}
+ 
+.accordion-header > .fmi {
+  right: 1em !important;
+}
+ 
+.accordion-row {
+  margin-bottom: 0 !important;
+}
+ 
+/*
+ * Main
+----------------------------------- */
+main {
+  position: relative;
+  margin-top: 3px;
+  padding-bottom: $fm-footer-height;
+}
+ 
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+ 
+h1 {
+  margin: 30px 0 10px !important;
+  font-size: 40px;
+}
+ 
+h2 {
+  font-size: 24px!important;
+  font-weight: 600!important;
+}
+ 
+
+h6 {
+  color: black;
+}
+ 
+.lead {
+  line-height: normal;
+}
+ 
+.row {
+  margin-bottom: 12px;
+}
+/*
+* Login Form
+----------------------------------- */
+.form-row {
+margin-bottom: 20px;
+}
+ 
+label {
+  font-weight: bold;
+}
+ 
+/*
+* Sidebar
+----------------------------------- */
+ 
+.sidebar {
+    font-size: 14px;
+    position: relative;
+    // top: $fm-header-height;
+    // bottom: 0;
+    // left: 0;
+    background: $fm-green !important;
+    padding: 8px 0 0;
+    // box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+ 
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+ 
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+ 
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+ 
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+ 
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+ 
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+ 
+.sidebar-heading {
+  font-size: .65rem;
+  text-transform: uppercase;
+}
+ 
+/*
+* Carousel card settings.
+* NOTE: These styles are here to override ADK styles that are still imported.
+*/
+ 
+.ui-card-content h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.ui-card-content .ui-g {
+  padding-left: 0;
+}
+.ui-card-footer .ui-g {
+  height: 52px;
+}
+.ui-card-description {
+  line-height: 18px;
+  height: 100px;
+}
+.ui-card-footer .fmi {
+  font-size: 26px;
+  color: #085280;
+  padding-left: 4px;
+}
+ 
+.bottom-margin {
+  margin-bottom: 60px;
+}
+
+.h3, h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}

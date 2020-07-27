@@ -1,0 +1,83 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="page-header">Fannie Mae Connect</h1>
+        <h3>
+          Access to the information you need to drive your business.
+        </h3>
+      </div>
+    </div>
+    <form #searchForm="ngForm" class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="input-group mb-3">
+              <!-- <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                    <span class="fmi fmi-search"></span>
+                </span>
+              </div> -->
+              <input
+                type="text"
+                class="form-control"
+                id="search"
+                name="search"
+                [(ngModel)]="model.search"
+                placeholder="Enter search term">
+              <div class="input-group-append">
+                <button class="btn btn-primary" (click)="search()">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+    </form>
+  </div>
+</div>
+ 
+<div class="container">
+  <div class="row welcome-message" *ngIf="showWelcome">
+    <div class="col-md-12 text-center lead">
+      <strong>New Users: </strong>
+      Learn how to use Fannie Mae Connect as your single source
+      for data, analytics and reporting by clicking <strong><a href="#">here</a></strong>.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <div class="icon ic-streamlined"></div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div class="icon ic-bi-tools"></div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="icon ic-speed"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <h3>Streamlined Data</h3>
+      <p class="lead">Key Fannie Mae data, consolidated from multiple reporting applications.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <h3>Business Intelligence Tools</h3>
+      <p class="lead">Cutting edge intelligence tools provide high quality analytics.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <h3>Speed and Efficiency</h3>
+      <p class="lead">Everything in one place for faster workflow.</p>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-md-12">
+      <select (change)="testFn($event.target.value)">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="vw">VW</option>
+        <option value="audi" selected>Audi</option>
+      </select>
+    </div>
+  </div>
+</div>
+ 

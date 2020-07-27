@@ -1,3 +1,7 @@
+export const urlEndpoints = {
+};
+ 
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'https://' + window.location.hostname,
 };
