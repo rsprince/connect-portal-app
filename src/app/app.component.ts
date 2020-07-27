@@ -170,10 +170,10 @@ export class AppComponent {
       // icon: 'fmi fmi-user',
       command: () => {this.handleProfile();}
     },
-    {
-      label: 'Sign Out',
-      url: urlEndpoints[window.location.hostname].logoutUrl
-    }
+    // {
+    //   label: 'Sign Out',
+    //   url: urlEndpoints[window.location.hostname].logoutUrl
+    // }
   ];
  
   // Help links to be shown when the profile drop-dpwn is clicked
