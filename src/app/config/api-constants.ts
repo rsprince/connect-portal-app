@@ -1,7 +1,8 @@
 import { urlEndpoints, environment } from '../../environments/environment';
  
 export class APIConstants {
-  public static readonly baseUrl= urlEndpoints[window.location.hostname].baseUrl;
+  // public static readonly baseUrl= urlEndpoints[window.location.hostname].baseUrl;
+  public static readonly baseUrl= 'assets/api/';
   
   /*
    * Some local files still needed for development.
