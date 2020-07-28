@@ -1,3 +1,6 @@
+Site published at:
+https://rsprince.github.io/connect-portal-app/
+
 # FM CONNECT
 This application is a refactored version of the Fannie Mae "Connect" web application. The goal is to modernize the code by refactoring it as a single page application ("SPA"), utilizing Angular 6 and Bootstrap on the front end, and where possible, Fannie Mae's Angular Development Kit ("ADK"). The backend is also being refactored as stand-alone APIs. Unit tests utilize Jasmine.
  
